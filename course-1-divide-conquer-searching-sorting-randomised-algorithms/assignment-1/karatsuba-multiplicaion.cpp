@@ -130,7 +130,7 @@ string stringSubtract(string a, string b)
 }
 
 
-string recursiveMultiplication(string& x, string& y)
+string karatsubaMultiplication(string& x, string& y)
 {
     /*
      Karatsuba multiplication
@@ -177,15 +177,15 @@ string recursiveMultiplication(string& x, string& y)
     
     /*+++ recurcively compute ac, bd and (a+b)(c+d)+++ */
     string ac;
-    ac = recursiveMultiplication(a,c);
+    ac = karatsubaMultiplication(a,c);
     
     string bd;
-    bd = recursiveMultiplication(b,d);
+    bd = karatsubaMultiplication(b,d);
     
     string midsum;
     string stringSumAB = stringSum(a,b);
     string stringSumCD = stringSum(c,d);
-    midsum = recursiveMultiplication(stringSumAB,stringSumCD);
+    midsum = karatsubaMultiplication(stringSumAB,stringSumCD);
     /*--- recurcively compute ac, bd and (a+b)(c+d)--- */
 
     /*compute ad+bc = (a+b)(c+d) - ac - bd*/
@@ -248,7 +248,7 @@ int main(int argc, const char * argv[]) {
         cout << "Input should be a valid positive number:\n" << endl;
         return 0;
     }
-    string result = recursiveMultiplication(X,Y);
+    string result = karatsubaMultiplication(X,Y);
     size_t nonZeroPosition = result.find_first_not_of('0');
     if(nonZeroPosition == std::string::npos)
     {
