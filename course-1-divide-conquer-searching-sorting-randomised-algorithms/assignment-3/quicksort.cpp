@@ -158,7 +158,7 @@ int main(int argc, const char * argv[]) {
     
     std::vector<int> inputVector;
     int input;
-    string fileName = "<fulll path to your input file here>";
+    string fileName = "<full path of the test-input-quicksort.txt file here>";
     std::ifstream in(fileName);
     if(!in)
     {
