@@ -131,7 +131,7 @@ void contractVertices(std::vector<vector<int>> &input,long vertexRemainingCount)
 
 int main(int argc, const char * argv[]) {
     //read input file
-    std::string fileName = "/Users/RohiniPangrikar 1/Desktop/kragerMinCut.txt";
+    std::string fileName = "<input-graph-file>";
     std::ifstream in(fileName);
     if(!in)
     {
