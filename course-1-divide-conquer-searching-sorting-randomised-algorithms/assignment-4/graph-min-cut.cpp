@@ -149,7 +149,7 @@ int main(int argc, const char * argv[]) {
     long lowestMinCut = totalIterationCounts*totalIterationCounts;
     
     // Choose the iterations to be a large number; I tested with totalIterationCounts & totalIterationCounts^2
-    for(int i = 0; i < totalIterationCounts*totalIterationCounts; i++)
+    for(int i = 0; i < totalIterationCounts; i++)
     {
         std::vector<std::vector<int>> currentIterationAdjacencyList(inputAdjacentList);
         contractVertices(currentIterationAdjacencyList, currentIterationAdjacencyList.size());
